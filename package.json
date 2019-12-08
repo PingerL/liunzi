@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/PingerL/liunzi/issues"
   },
-  "homepage": "https://github.com/PingerL/liunzi#readme"
+  "homepage": "https://github.com/PingerL/liunzi#readme",
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
 }
