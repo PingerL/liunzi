@@ -10,7 +10,25 @@
 </template>
 <script>
 export default {
-  props: ["icon", "iconPosition"] //props:接收父组件传递过来的参数
+  // props: ["icon", "iconPosition"] //props:接收父组件传递过来的参数
+  // props的第二种写法
+  props: {
+    icon: {},
+    iconPosition: {
+      type: String,
+      default: 'left',
+      validator (value){  //validator 属性的检查器
+        /*if(value !== 'left' && value !== 'right'){
+          return false
+        } else {
+          return true
+        }
+        */
+       //上面的if-else可以简化成
+       return value === 'left' || value === 'right'
+      }
+    }
+  }
 };
 </script>
 <style lang="scss">
