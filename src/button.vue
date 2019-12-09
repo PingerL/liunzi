@@ -1,8 +1,11 @@
 <template>
   <button class="g-button" :class="{[`icon-${iconPosition}`]:true}">
-    <svg class="icon" v-if="icon">
+    <!-- <svg class="icon" v-if="icon">
       <use :xlink:href="`#i-${icon}`" />
     </svg>
+     -->
+     <!-- 将上面改写为 icon 单文件组件 -->
+    <g-icon :name = "icon" v-if="icon"></g-icon>
     <div class="content">
       <slot></slot>
     </div>
