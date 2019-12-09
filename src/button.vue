@@ -11,6 +11,8 @@
 <script>
 export default {
   props: ["icon", "iconPosition"] //props:接收父组件传递过来的参数
+  // props第二种写法
+
 };
 </script>
 <style lang="scss">
