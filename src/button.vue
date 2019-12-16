@@ -1,23 +1,28 @@
 <template>
-  <button class="g-button" :class="{[`icon-${iconPosition}`]:true}">
+  <button class="g-button" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')">
     <!-- <svg class="icon" v-if="icon">
       <use :xlink:href="`#i-${icon}`" />
     </svg>
      -->
      <!-- 将上面改写为 icon 单文件组件 -->
-    <g-icon :name = "icon" v-if="icon" class="icon"></g-icon>
-    <g-icon name = "loading" class="loading"></g-icon>
+    <g-icon :name = "icon" v-if="icon && !loading" class="icon"></g-icon>
+    <g-icon name = "loading" class="loading icon" v-if="loading "></g-icon>
     <div class="content">
       <slot></slot>
     </div>
   </button>
 </template>
 <script>
+
 export default {
   // props: ["icon", "iconPosition"] //props:接收父组件传递过来的参数
   // props的第二种写法
   props: {
     icon: {},
+    loading: {
+      type:Boolean,
+      default:false
+    },
     iconPosition: {
       type: String,
       default: 'left',
