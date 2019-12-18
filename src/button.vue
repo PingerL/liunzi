@@ -13,8 +13,11 @@
   </button>
 </template>
 <script>
-
+import Icon from './icon'
 export default {
+  components:{
+    'g-icon':Icon
+  },
   // props: ["icon", "iconPosition"] //props:接收父组件传递过来的参数
   // props的第二种写法
   props: {
