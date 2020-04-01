@@ -38,34 +38,24 @@
     }
   </style>
 </head>
-<style>
-  .row {
-    display: flex;
-  }
-  .col {
-    height: 100px;
-    background-color: gray;
-    width: 50%;
-    border: 1px solid red;
-  }
-</style>
+
 
 <body>
   <div id="app">
-    <div class="box">
-      <g-row>
+    <div class="box" >
+      <g-row gutter="20">
         <g-col>1</g-col>
         <g-col>2</g-col>
       </g-row>
-      <g-row>
+      <g-row gutter="20">
         <g-col>1</g-col>
         <g-col>2</g-col>
         <g-col>3</g-col>
         <g-col>4</g-col>
       </g-row>
       <g-row>
-        <g-col span="1">1</g-col>
-        <g-col span="23">23</g-col>
+        <g-col span="2">2</g-col>
+        <g-col span="20" offset="2">22</g-col>
       </g-row>
     </div>
     <hr>
