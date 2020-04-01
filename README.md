@@ -8,18 +8,15 @@
 ```
 *{box-sizing:border-box}
 ```
+## 使 `g-input` 支持 `v-model`
+```
+// input.vue 中
+<input type="text" :value="value"  @input="$emit('input',$event.target.value)">
 
-## 文档
+// index.html 中
+<g-input v-model="msg" ></g-input>
+```
 
-## 提问
-
-## 变更记录
-
-## 联系方式
-
-## 贡献代码
-
-作者：Pinger
 
 
 ## 运行脚本测试
