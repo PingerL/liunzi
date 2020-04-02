@@ -18,6 +18,7 @@ export default {
       type:[Number,String]
     }
   },
+  // vue 提示要将 gutter 放在 data 中
   data(){
     return {
       gutter:0
