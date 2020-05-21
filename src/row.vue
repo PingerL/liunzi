@@ -43,6 +43,7 @@ export default {
 .row {
   display: flex;
   height: 100px;
+  border: 1px solid red;
   &.align-right {
     justify-content: flex-end;
   }
